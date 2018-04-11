@@ -21,6 +21,11 @@ A simple CSS preset to enable box-sizing, set some text rendering options.
   box-sizing: border-box;
 }
 
+*::selection { 
+	background: var(--p-primary-color);
+	color: var(--p-fill-color);
+}
+
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
@@ -31,3 +36,4 @@ body {
 	padding: 0;
 	min-height: 100vh;
 }
+

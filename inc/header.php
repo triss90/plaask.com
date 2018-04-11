@@ -38,6 +38,8 @@ if (!isset($pageAuthor) || empty($pageAuthor)) {
     <meta name="keywords" content="<?php echo $pageKeyWords; ?>">
     <meta name="author" content="<?php echo $pageAuthor; ?>">
     <title><?php echo $pageTitle; ?></title>
+    
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link href="/assets/css/app.css" rel="stylesheet">
 </head>
 <body id="<?php echo $pageId; ?>">

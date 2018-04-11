@@ -6,9 +6,15 @@
     overflow-y: scroll;
     
     #p-page {
+        margin: 50px auto;
+        max-width: 1200px;
+        background-color: var(--p-extralight-body-color); 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        resize: vertical;
         .contenteditable {
+            border-bottom: 2px dotted transparent;
             &:hover {
-                border-bottom: 2px dotted var(--p-primary-color);
+                border-bottom-color: var(--p-primary-color);
             }
             &:focus {
                 background: var(--p-fill-color);
