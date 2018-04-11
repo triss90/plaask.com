@@ -1,0 +1,20 @@
+.label {
+    font-size: 0.67rem;
+    background: var(--p-fill-color);
+    padding: 0.05rem 0.2rem 0.1rem 0.2rem;
+    display: inline;
+    margin: 0 0.125rem;
+    border-radius: 4px;
+    &.info {
+        background: var(--p-light-info-color);
+    }
+    &.success {
+        background: var(--p-light-success-color);
+    }
+    &.warning {
+        background: var(--p-light-warning-color);
+    }
+    &.error {
+        background: var(--p-light-error-color);
+    }
+}
