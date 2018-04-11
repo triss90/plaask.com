@@ -1,0 +1,7 @@
+#editor-content {
+    background: var(--p-light-body-color);
+    height: 100vh;
+    width: calc(100% - 256px);
+    overflow-x: hidden;
+    overflow-y: scroll;
+}

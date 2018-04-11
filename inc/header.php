@@ -38,10 +38,10 @@ if (!isset($pageAuthor) || empty($pageAuthor)) {
     <meta name="keywords" content="<?php echo $pageKeyWords; ?>">
     <meta name="author" content="<?php echo $pageAuthor; ?>">
     <title><?php echo $pageTitle; ?></title>
+    <link href="/assets/css/app.css" rel="stylesheet">
 </head>
 <body id="<?php echo $pageId; ?>">
 
 <?php
-include_once('assets/icons.html');
-include_once('assets/colors.html');
+
 ?>
