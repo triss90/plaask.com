@@ -78,6 +78,8 @@ include_once('../assets/colors.html');
         </div>
     </div>
 
+    <hr>
+
 </div>
 
 <?php include_once('../inc/footer.php'); ?>

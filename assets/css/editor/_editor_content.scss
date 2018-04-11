@@ -8,10 +8,10 @@
     #p-page {
         .contenteditable {
             &:hover {
-                border-bottom: 2px dashed var(--p-primary-color);
+                border-bottom: 2px dotted var(--p-primary-color);
             }
-            &.focus {
-                background: red;
+            &:focus {
+                background: var(--p-fill-color);
                 outline: none;
             }
         }
