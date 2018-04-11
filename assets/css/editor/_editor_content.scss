@@ -4,4 +4,16 @@
     width: calc(100% - 256px);
     overflow-x: hidden;
     overflow-y: scroll;
+    
+    #p-page {
+        .contenteditable {
+            &:hover {
+                border-bottom: 2px dashed var(--p-primary-color);
+            }
+            &.focus {
+                background: red;
+                outline: none;
+            }
+        }
+    }
 }
