@@ -273,6 +273,8 @@ include_once('../assets/colors.html');
     <!-- TOOLTIPS --> 
     <div id="tooltips">
         <h4>Tooltips</h4>
+        <a href="#" data-tooltip-below="I’m the tooltip text.">I’m a link with a tooltip <i>below</i>.</a>
+        <br><br>
         <a href="#" data-tooltip="I’m the tooltip text.">I’m a link with a tooltip.</a>
         <br><br>
         <a href="#" data-tooltip-below="I’m the tooltip text.">I’m a link with a tooltip <i>below</i>.</a>
@@ -284,28 +286,30 @@ include_once('../assets/colors.html');
 
     <hr>
 
-
     <!-- TOP NAVIGATION --> 
     <div id="top-navigation">
         <h4>Top Navigation</h4>
         <nav class="top-nav">
-            <div class="nav-items">
-                <a href="#0">Item1</a>
+            <div class="nav-items right">
+                <span href="#0" class="dropdown">
+                    <span class="dropdown-label">
+                        Tristan White
+                        <svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-angle-down"></use></svg>
+                    </span>
+                    <div class="dropdown-menu">
+                        <a href="" class="dropdown-item">test</a>
+                        <a href="" class="dropdown-item">test</a>
+                        <a href="" class="dropdown-item">test</a>
+                    </div>
+                </span>
                 <a href="#0">Item2</a>
                 <a href="#0" class="dropdown-toggle" data-dropdown="myDropdown2">Item3</a>
                 <a href="#0" class="dropdown-toggle" data-dropdown="myDropdown">Item4</a>
             </div>
-            <div class="nav-items right">
+            <div class="nav-items">
                 <a href="#0" data-tooltip-below="Computer screen size" title="Computer screen size"><svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-laptop"></use></svg></a>
                 <a href="#0" data-tooltip-below="Phone screen size" title="Phone screen size"><svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-phone"></use></svg></a>
                 <a href="#0" data-tooltip-below="Tablet screen size" title="Tablet screen size"><svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tablet"></use></svg></a>
-            </div>
-
-            <div class="dropdown-menu" data-dropdown="myDropdown">
-                <p>Dropdown 1</p>
-            </div>
-            <div class="dropdown-menu" data-dropdown="myDropdown2">
-                <p>Dropdown 2</p>
             </div>
         </nav>
     </div>
@@ -318,21 +322,7 @@ include_once('../assets/colors.html');
 <script src="../assets/js/plaask-editor-min.js"></script>
 
 <script>
-    var dropbownToggle = $('.dropdown-toggle'),
-        dropbownMenu = $('.dropdown-menu');
-
-        dropbownToggle.hover(function() {
-            var dropdownToggleName = $(this).attr('data-dropdown');
-            console.log(dropdownToggleName);
-
-            dropbownMenu.each(function() {
-                var dropdownMenuName = $(this).attr('data-dropdown');
-                if (dropdownToggleName === dropdownMenuName) {
-                    $(this).toggleClass('shown');
-                }
-                console.log(dropdownMenuName);
-            });
-        });
+ 
 </script>
 
 <?php include_once('../inc/footer.php'); ?>

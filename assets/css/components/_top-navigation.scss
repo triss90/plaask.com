@@ -8,27 +8,95 @@
             float: right;
         }
         a {
-           color: var(--p-light-text-color);
-           height: 64px;
-           line-height: 64px;
-           padding: 0 10px;
-           display: inline-block;
-           &:hover {
-               background: var(--p-dark-body-color);
-           }
-           svg {
-               fill: var(--p-light-text-color);
-               margin-top: 1.25rem;
-           }
+            color: var(--p-light-text-color);
+            height: 64px;
+            line-height: 64px;
+            padding: 0 10px;
+            display: inline-block;
+            text-decoration: none;
+            &:hover {
+                background: var(--p-dark-body-color);
+            }
+            svg {
+                fill: var(--p-light-text-color);
+                margin-top: 1.25rem;
+                height: 24px;
+                width: 24px;
+                
+            }
         }
-    }
-    .dropdown-menu {
-        display: none;
-        &.shown {
-            display: block;
+        .dropdown {
+            position: relative;
+            z-index: 10;
+            &:hover .dropdown-menu {
+                opacity: 1;
+                visibility: visible;
+            }
+            &:hover .dropdown-label {
+                background: var(--p-dark-body-color);
+            }
+            .dropdown-label {
+                color: var(--p-light-text-color);
+                height: 64px;
+                line-height: 64px;
+                padding: 0 10px;
+                display: inline-block;
+                svg.icon {
+                    position: relative;
+                    width: 10px;
+                    height: 24px;
+                    top: 6px;
+                    margin: 0;
+                    fill: var(--p-light-text-color);
+                }
+            }
+            .dropdown-menu {
+                position: absolute;
+                padding: 4px 0;
+                top: 50px;
+                right: 0;
+                width: 160px;
+                background-color: var(--p-darker-body-color);
+                border-radius: 4px;
+                list-style-type: none;
+                opacity: 0;
+                visibility: hidden;
+                text-align: left;
+                transition: all 200ms;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: -12px;
+                    height: 12px;
+                    width: 100%;
+                    background-color: transparent;
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    right: 6px;
+                    top: -16px;
+                    height: 0;
+                    width: 0;
+                    border: 8px solid transparent;
+                    border-bottom-color: var(--p-darker-body-color);
+                }
+                a {
+                    color: var(--p-light-text-color);
+                    height: auto;
+                    line-height: 1.5;
+                    padding: 10px 20px;
+                    display: block;
+                    position: relative;
+                }
+            }
         }
-    }
-    .dropdown-toggle {
-
     }
 }
+
+
+
+
+
+
+

@@ -16,14 +16,17 @@
 
     #p-page {
         margin: 50px auto;
-        max-width: 1450px;
+        max-width: 1920px;
         background-color: var(--p-extralight-body-color); 
         box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         resize: vertical;
+        &.transition {
+            transition: all 250ms ease-in-out;
+        }
         .contenteditable {
-            border-bottom: 2px dotted transparent;
+            border: 2px dotted transparent;
             &:hover {
-                border-bottom-color: var(--p-primary-color);
+                border-color: var(--p-primary-color);
             }
             &:focus {
                 background: var(--p-fill-color);

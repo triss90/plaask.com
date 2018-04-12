@@ -15,7 +15,7 @@ function displayPageSize() {
 
     // Make the page div resizable
     page.resizable({
-        maxWidth: 1450,
+        maxWidth: 1920,
         minHeight: 568,
         minWidth: 320,
         stop: function(event, ui) {
@@ -29,6 +29,60 @@ function displayPageSize() {
         pageWidthElement.html(page.width() + 'px + ');
         pageHeightElement.html(page.height() + 'px');
     });
+}
+
+function computerPresetSize() {
+    var page = $('#p-page'),
+        pageHeightElement = $('#page-height'),
+        pageWidthElement = $('#page-width'),
+        wSize = '1450',
+        hSize = '900';
+    page.addClass('transition');
+    pageWidthElement.html(wSize + 'px + ');
+    pageHeightElement.html(hSize + 'px');
+    localStorage.setItem('pageWidth', wSize);
+    localStorage.setItem('pageHeight', hSize);
+    page.width(wSize);
+    page.height(hSize);
+    setTimeout(function(){
+        page.removeClass('transition');
+    },250);
+}
+
+function phonePresetSize() {
+    var page = $('#p-page'),
+        pageHeightElement = $('#page-height'),
+        pageWidthElement = $('#page-width'),
+        wSize = '375',
+        hSize = '667';
+    page.addClass('transition');
+    pageWidthElement.html(wSize + 'px + ');
+    pageHeightElement.html(hSize + 'px');
+    localStorage.setItem('pageWidth', wSize);
+    localStorage.setItem('pageHeight', hSize);
+    page.width(wSize);
+    page.height(hSize);
+    setTimeout(function(){
+        page.removeClass('transition');
+    },250);
+}
+
+function tabletPresetSize() {
+    var page = $('#p-page'),
+        pageHeightElement = $('#page-height'),
+        pageWidthElement = $('#page-width'),
+        wSize = '1024',
+        hSize = '768';
+    page.addClass('transition');
+    pageWidthElement.html(wSize + 'px + ');
+    pageHeightElement.html(hSize + 'px');
+    localStorage.setItem('pageWidth', wSize);
+    localStorage.setItem('pageHeight', hSize);
+    page.width(wSize);
+    page.height(hSize);
+    setTimeout(function(){
+        page.removeClass('transition');
+    },250);
 }
 
 
@@ -57,9 +111,7 @@ function insertLocalstorage() {
     });
 }
 
-function navigation() {
 
-}
 
 
 // Execute functions
@@ -67,5 +119,4 @@ $(document).ready(function() {
     displayPageSize();
     insertLocalstorage();
     saveTextToLocalstorage();
-    navigation();
 });
