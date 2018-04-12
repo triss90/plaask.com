@@ -46,13 +46,16 @@ include_once('../assets/colors.html');
             
             <h5>Text colors</h5>
             <div class="color" style="background:var(--p-heading-color);color:white;">var(--p-heading-color)</div>
-            <div class="color" style="background:var(--p--text-color);color:white;">var(--p--text-color)</div>
+            <div class="color" style="background:var(--p-light-heading-color);color:black;">var(--p-light-heading-color)</div>
+            <div class="color" style="background:var(--p-text-color);color:white;">var(--p-text-color)</div>
+            <div class="color" style="background:var(--p-light-text-color);color:black;">var(--p-light-text-color)</div>
 
             <br><br>
             
             <h5>Background colors</h5>
             <div class="color" style="background:var(--p-dark-body-color);color:white;">var(--p-dark-body-color)</div>
-            <div class="color" style="background:var(-p-light-body-color);color:black;">var(-p-light-body-color)</div>
+            <div class="color" style="background:var(--p-darker-body-color);color:white;">var(--p-darker-body-color)</div>
+            <div class="color" style="background:var(--p-light-body-color);color:black;">var(-p-light-body-color)</div>
             <div class="color" style="background:var(--p-extralight-body-color);color:black;">var(--p-extralight-body-color)</div>
             <div class="color" style="background:var(--p-border-color);color:black;">var(--p-border-color)</div>
             <div class="color" style="background:var(--p-light-border-color);color:black;">var(--p-light-border-color)</div>
@@ -272,12 +275,64 @@ include_once('../assets/colors.html');
         <h4>Tooltips</h4>
         <a href="#" data-tooltip="I’m the tooltip text.">I’m a link with a tooltip.</a>
         <br><br>
+        <a href="#" data-tooltip-below="I’m the tooltip text.">I’m a link with a tooltip <i>below</i>.</a>
+        <br><br>
         <button class="button primary" data-tooltip="I’m the tooltip text.">I’m a Button with a tooltip.</button>
         <br>
         <p>Lorem ipsum dolor sit amet, <strong data-tooltip="AWESOME TOOLTIP">consectetur adipisicing elit</strong>. Hic, voluptatem cupiditate eligendi autem itaque perferendis molestiae aspernatur distinctio! Porro, corrupti eaque. Et fuga molestiae ut labore inventore laborum temporibus magni.</p>
     </div>
 
     <hr>
+
+
+    <!-- TOP NAVIGATION --> 
+    <div id="top-navigation">
+        <h4>Top Navigation</h4>
+        <nav class="top-nav">
+            <div class="nav-items">
+                <a href="#0">Item1</a>
+                <a href="#0">Item2</a>
+                <a href="#0" class="dropdown-toggle" data-dropdown="myDropdown2">Item3</a>
+                <a href="#0" class="dropdown-toggle" data-dropdown="myDropdown">Item4</a>
+            </div>
+            <div class="nav-items right">
+                <a href="#0" data-tooltip-below="Computer screen size" title="Computer screen size"><svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-laptop"></use></svg></a>
+                <a href="#0" data-tooltip-below="Phone screen size" title="Phone screen size"><svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-phone"></use></svg></a>
+                <a href="#0" data-tooltip-below="Tablet screen size" title="Tablet screen size"><svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tablet"></use></svg></a>
+            </div>
+
+            <div class="dropdown-menu" data-dropdown="myDropdown">
+                <p>Dropdown 1</p>
+            </div>
+            <div class="dropdown-menu" data-dropdown="myDropdown2">
+                <p>Dropdown 2</p>
+            </div>
+        </nav>
+    </div>
+
+    <hr>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="../assets/js/plaask-editor-min.js"></script>
+
+<script>
+    var dropbownToggle = $('.dropdown-toggle'),
+        dropbownMenu = $('.dropdown-menu');
+
+        dropbownToggle.hover(function() {
+            var dropdownToggleName = $(this).attr('data-dropdown');
+            console.log(dropdownToggleName);
+
+            dropbownMenu.each(function() {
+                var dropdownMenuName = $(this).attr('data-dropdown');
+                if (dropdownToggleName === dropdownMenuName) {
+                    $(this).toggleClass('shown');
+                }
+                console.log(dropdownMenuName);
+            });
+        });
+</script>
 
 <?php include_once('../inc/footer.php'); ?>

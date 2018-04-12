@@ -32,6 +32,7 @@ function displayPageSize() {
 }
 
 
+
 // Save text to localstorage
 function saveTextToLocalstorage() {
     // Get all editiple text input
@@ -44,6 +45,27 @@ function saveTextToLocalstorage() {
         localStorage.setItem(selectedTextFieldId, selectedTextFieldContent);
     });
 }
-    
-displayPageSize();
-saveTextToLocalstorage();
+
+
+
+// Insert data from localstorage to page
+function insertLocalstorage() {
+    // Loop over each key and localstorage and map matching keys to content IDs
+    $.each(localStorage, function(key, value) {        
+        var pId = $('#' + key);
+        pId.html(value);
+    });
+}
+
+function navigation() {
+
+}
+
+
+// Execute functions
+$(document).ready(function() {
+    displayPageSize();
+    insertLocalstorage();
+    saveTextToLocalstorage();
+    navigation();
+});
