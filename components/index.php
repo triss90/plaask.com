@@ -20,9 +20,6 @@ include_once('../assets/colors.html');
         width: 24px;
         margin: 10px;
     }
-    .colors {
-        
-    }
     .color {
         border: 1px solid var(--p-border-color);
         border-radius: 4px;
@@ -263,6 +260,18 @@ include_once('../assets/colors.html');
         <svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-circle-cross"></use></svg>
         <svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-circle-check"></use></svg>
         <svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-loading"></use></svg>
+    </div>
+
+    <hr>
+
+    <!-- TOOLTIPS --> 
+    <div id="tooltips">
+        <h4>Tooltips</h4>
+        <a href="#" data-tooltip="I’m the tooltip text.">I’m a link with a tooltip.</a>
+        <br><br>
+        <button class="button primary" data-tooltip="I’m the tooltip text.">I’m a Button with a tooltip.</button>
+        <br>
+        <p>Lorem ipsum dolor sit amet, <strong data-tooltip="AWESOME TOOLTIP">consectetur adipisicing elit</strong>. Hic, voluptatem cupiditate eligendi autem itaque perferendis molestiae aspernatur distinctio! Porro, corrupti eaque. Et fuga molestiae ut labore inventore laborum temporibus magni.</p>
     </div>
 
     <hr>
