@@ -35,27 +35,6 @@ include_once('../assets/colors.html');
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-
-
-<script>
-    $(function() {
-        var page = $('#p-page'),
-            pageHeightElement = $('#page-height'),
-            pageWidthElement = $('#page-width');
-
-        page.resizable({
-            maxWidth: 1200,
-            minHeight: 568,
-            minWidth: 320
-        });
-        
-        page.resize(function() {
-            pageWidthElement.html(page.width() + 'px + ');
-            pageHeightElement.html(page.height() + 'px');
-            console.log(page.width());
-            console.log(page.height());
-        });
-    });
-</script>
+<script src="../assets/js/plaask-editor-min.js"></script>
 
 <?php include_once('../inc/footer.php'); ?>

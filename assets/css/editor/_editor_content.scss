@@ -5,9 +5,18 @@
     overflow-x: hidden;
     overflow-y: scroll;
     
+    #page-size {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background:  var(--p-extralight-body-color);
+        padding: 5px;
+        z-index: 9999;
+    }
+
     #p-page {
         margin: 50px auto;
-        max-width: 1200px;
+        max-width: 1450px;
         background-color: var(--p-extralight-body-color); 
         box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         resize: vertical;
