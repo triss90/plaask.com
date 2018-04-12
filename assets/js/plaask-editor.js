@@ -1,4 +1,6 @@
+// Manipulate the size of the page and save usersetting to localstorage
 function displayPageSize() {
+    // Set variables 
     var page = $('#p-page'),
     pageHeightElement = $('#page-height'),
     pageWidthElement = $('#page-width');
@@ -11,6 +13,7 @@ function displayPageSize() {
     pageWidthElement.html(page.width() + 'px + ');
     pageHeightElement.html(page.height() + 'px');
 
+    // Make the page div resizable
     page.resizable({
         maxWidth: 1450,
         minHeight: 568,
@@ -21,10 +24,26 @@ function displayPageSize() {
         }
     });
 
+    // Update the height and width display
     page.resize(function() {
         pageWidthElement.html(page.width() + 'px + ');
         pageHeightElement.html(page.height() + 'px');
     });
 }
+
+
+// Save text to localstorage
+function saveTextToLocalstorage() {
+    // Get all editiple text input
+    var pTextField = $('.contenteditable');
+
+    // Save text to localstorage when focus is removed 
+    pTextField.on( "focusout", function() {
+        var selectedTextFieldId = this.id,
+            selectedTextFieldContent = $('#' + this.id).text();
+        localStorage.setItem(selectedTextFieldId, selectedTextFieldContent);
+    });
+}
     
 displayPageSize();
+saveTextToLocalstorage();

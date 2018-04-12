@@ -9,11 +9,6 @@ $pageAuthor = "";
 include_once('inc/header.php');
 ?>
 
-<svg class="rc-icon sidebar__toolbar-button-icon sidebar__toolbar-button-icon--globe" aria-hidden="true" fill="var(--rc-color-button-primary)">
-    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-globe"></use>
-</svg>
-
-
-<a href="/editor">Editor</a>
+<h1>Pis af @DB</h1>
 
 <?php include_once('inc/footer.php'); ?>

@@ -24,11 +24,8 @@ include_once('../assets/colors.html');
     </div>
 
    <div id="p-page">
-       <h1 contenteditable="true" class="contenteditable">This is a website title</h1>
-       <p contenteditable="true" class="contenteditable">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quibusdam, at ex odio quasi inventore sint cumque ipsam eveniet iusto reiciendis asperiores labore, adipisci eligendi consectetur? Mollitia expedita iusto sapiente.</p>
-       <svg class="notification-icon" aria-hidden="true">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-loading"></use>
-        </svg>
+       <h1 id="p-header-title" contenteditable="true" class="contenteditable">This is a website title</h1>
+       <p id="p-header-tagline" contenteditable="true" class="contenteditable">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quibusdam, at ex odio quasi inventore sint cumque ipsam eveniet iusto reiciendis asperiores labore, adipisci eligendi consectetur? Mollitia expedita iusto sapiente.</p>
    </div>
 
 </div>
@@ -36,5 +33,9 @@ include_once('../assets/colors.html');
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="../assets/js/plaask-editor-min.js"></script>
+
+<script>
+
+</script>
 
 <?php include_once('../inc/footer.php'); ?>
