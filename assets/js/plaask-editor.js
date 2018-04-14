@@ -31,12 +31,13 @@ function displayPageSize() {
     });
 }
 
+// Set the page width and height to preset computer size
 function computerPresetSize() {
     var page = $('#p-page'),
         pageHeightElement = $('#page-height'),
         pageWidthElement = $('#page-width'),
-        wSize = '1450',
-        hSize = '900';
+        wSize = '1920',
+        hSize = '1080';
     page.addClass('transition');
     pageWidthElement.html(wSize + 'px + ');
     pageHeightElement.html(hSize + 'px');
@@ -49,6 +50,7 @@ function computerPresetSize() {
     },250);
 }
 
+// Set the page width and height to preset phone size
 function phonePresetSize() {
     var page = $('#p-page'),
         pageHeightElement = $('#page-height'),
@@ -67,6 +69,7 @@ function phonePresetSize() {
     },250);
 }
 
+// Set the page width and height to preset tablet size
 function tabletPresetSize() {
     var page = $('#p-page'),
         pageHeightElement = $('#page-height'),
@@ -95,7 +98,7 @@ function saveTextToLocalstorage() {
     // Save text to localstorage when focus is removed 
     pTextField.on( "focusout", function() {
         var selectedTextFieldId = this.id,
-            selectedTextFieldContent = $('#' + this.id).text();
+            selectedTextFieldContent = $('#' + this.id).html();
         localStorage.setItem(selectedTextFieldId, selectedTextFieldContent);
     });
 }
