@@ -38,21 +38,20 @@ include_once('../assets/colors.html');
             </span>
             <a href="#0">Item2</a>
             <a href="#0">Item3</a>
-            <a href="#0">Item4</a>
+            <a href="#0" data-tooltip-below="Preview website" title="Preview website"><svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-view"></use></svg></a>
+            <a href="#0" data-tooltip-below="Export website" title="Export website"><svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-jump"></use></svg></a>
         </div>
     </nav>
     
-
     <div id="page-size">
         <span id="page-width"></span>
         <span id="page-height"></span>
     </div>
 
    <div id="p-page">
-        <h1 id="p-header-title" contenteditable="true" class="contenteditable">This is a website title</h1>
-        <p id="p-header-tagline" contenteditable="true" class="contenteditable">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quibusdam, at ex odio quasi inventore sint cumque ipsam eveniet iusto reiciendis asperiores labore, adipisci eligendi consectetur? Mollitia expedita iusto sapiente.</p>
-        <br>
-        <p id="p-header-tagline-two" contenteditable="true" class="contenteditable">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quibusdam, at ex odio quasi inventore sint cumque ipsam eveniet iusto reiciendis asperiores labore, adipisci eligendi consectetur? Mollitia expedita iusto sapiente.</p>
+        <!-- <h1 id="p-header-title" contenteditable="true" class="contenteditable">This is a website title</h1> -->
+        <iframe id="theme1" src="/assets/theme1/theme1.php" width="100%" height="100%" frameborder="0"></iframe>
+        
    </div>
 
 </div>
@@ -60,6 +59,10 @@ include_once('../assets/colors.html');
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="../assets/js/plaask-editor-min.js"></script>
+
+<script>
+
+</script>
 
 
 <?php include_once('../inc/footer.php'); ?>
