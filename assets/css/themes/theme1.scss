@@ -34,28 +34,49 @@ body {
 	padding: 0;
 	min-height: 100vh;
 }
+
+
+
+
 .contenteditable {
     border: 2px dotted transparent;
+    position: relative;
+    &:before {
+        content: "\00d7";
+        display: none;
+        padding: 10px;
+        position: absolute;
+        top: -2.1rem;
+        right: -1.8rem;
+        color: var(--p-primary-color);
+        font-size: 1.8rem;
+        margin: 0;
+        line-height: 1;
+        cursor: pointer;
+        transition: 200ms all ease-in-out;
+        font-weight: 400 !important;
+        &:hover {
+            font-size: 3rem !important;
+        }
+    }
     &:hover {
         border: 2px dotted var(--p-primary-color)!important;
+        &:before {
+            display: block;
+        }
+        z-index: 999;
     }
     &:focus {
-        // background: var(--p-fill-color) !important;
         border: 2px dotted var(--p-primary-color)!important;
-        // color: var(--p-text-color) !important;
         text-shadow: none !important;
         outline: none !important;
+        z-index: 998;
+        &:before {
+            display: block;
+        }
     }
 }
-blockquote {
-    padding: 10px 10px 10px 20px;
-    background: var(--t1-color-3);
-    border-radius: 0 3px 3px 0;
-    border-left: 2px solid var(--t1-color-1);
-    color: var(--t1-color-4-1);
-    font-size: 20px;
-    margin: 30px 0;
-}
+
 
 
 
@@ -136,4 +157,14 @@ blockquote {
         height: 1px;
         background: var(--t1-color-4);
     }
+}
+
+// General
+blockquote {
+    padding: 10px 10px 10px 20px;
+    border-radius: 0 3px 3px 0;
+    border-left: 2px solid var(--t1-color-1);
+    color: var(--t1-color-4-1);
+    font-size: 20px;
+    margin: 30px 0;
 }

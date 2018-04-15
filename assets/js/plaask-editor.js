@@ -36,8 +36,8 @@ function computerPresetSize() {
     var page = $('#p-page'),
         pageHeightElement = $('#page-height'),
         pageWidthElement = $('#page-width'),
-        wSize = '1920',
-        hSize = '1080';
+        wSize = '1450',
+        hSize = '900';
     page.addClass('transition');
     pageWidthElement.html(wSize + 'px + ');
     pageHeightElement.html(hSize + 'px');

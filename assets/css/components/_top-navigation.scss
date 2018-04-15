@@ -3,8 +3,18 @@
     height: 64px;
     background: var(--p-darker-body-color);
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    // padding: 0 5%;
     .nav-items {
         display: inline;
+        .seprator {
+            width: 2px;
+            height: calc(100% - (10px + 20px));
+            position: relative;
+            top: 10px;
+            background: var(--p-dark-body-color);
+            display: inline-block;
+            margin: 5px 20px;
+        }
         &.right {
             float: right;
         }
@@ -23,7 +33,6 @@
                 margin-top: 1.25rem;
                 height: 24px;
                 width: 24px;
-                
             }
         }
         .dropdown {
@@ -43,19 +52,23 @@
                 padding: 0 10px;
                 display: inline-block;
                 svg.icon {
-                    position: relative;
-                    width: 10px;
-                    height: 24px;
-                    top: 6px;
-                    margin: 0;
+                    // position: relative;
+                    // width: 10px;
+                    // height: 24px;
+                    // top: 6px;
+                    // margin: 0;
+                    // fill: var(--p-light-text-color);
                     fill: var(--p-light-text-color);
+                    margin-top: 1.25rem;
+                    height: 24px;
+                    width: 24px;
                 }
             }
             .dropdown-menu {
                 position: absolute;
                 padding: 4px 0;
                 top: 50px;
-                right: 0;
+                right: -110px;
                 width: 160px;
                 background-color: var(--p-darker-body-color);
                 border-radius: 4px;
@@ -75,7 +88,7 @@
                 &:after {
                     content: '';
                     position: absolute;
-                    right: 6px;
+                    left: 18px;
                     top: -16px;
                     height: 0;
                     width: 0;
