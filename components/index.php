@@ -291,11 +291,14 @@ include_once('../assets/colors.html');
     <div id="top-navigation">
         <h4>Top Navigation</h4>
         <nav class="top-nav">
-            <div class="nav-items right">
+            <div class="nav-items">
+                <a href="#0" onclick="computerPresetSize();" id="computer-toggle" title="Computer screen size"><svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-laptop"></use></svg></a>
+                <a href="#0" onclick="phonePresetSize();" id="phone-toggle" title="Phone screen size"><svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-phone"></use></svg></a>
+                <a href="#0" onclick="tabletPresetSize();" id="tablet-toggle" title="Tablet screen size"><svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tablet"></use></svg></a>
+                <span class="seprator"></span>
                 <span href="#0" class="dropdown">
                     <span class="dropdown-label">
-                        Tristan White
-                        <svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-angle-down"></use></svg>
+                        <svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-list"></use></svg>
                     </span>
                     <div class="dropdown-menu">
                         <a href="" class="dropdown-item">test</a>
@@ -303,14 +306,8 @@ include_once('../assets/colors.html');
                         <a href="" class="dropdown-item">test</a>
                     </div>
                 </span>
-                <a href="#0">Item2</a>
-                <a href="#0" class="dropdown-toggle" data-dropdown="myDropdown2">Item3</a>
-                <a href="#0" class="dropdown-toggle" data-dropdown="myDropdown">Item4</a>
-            </div>
-            <div class="nav-items">
-                <a href="#0" data-tooltip-below="Computer screen size" title="Computer screen size"><svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-laptop"></use></svg></a>
-                <a href="#0" data-tooltip-below="Phone screen size" title="Phone screen size"><svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-phone"></use></svg></a>
-                <a href="#0" data-tooltip-below="Tablet screen size" title="Tablet screen size"><svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tablet"></use></svg></a>
+                <a href="#0" title="Preview website"><svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-view"></use></svg></a>
+                <a href="#0" title="Export website"><svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-jump"></use></svg></a>
             </div>
         </nav>
     </div>
