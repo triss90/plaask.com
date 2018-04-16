@@ -12,6 +12,8 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 @import '/assets/theme1/gridder.min.css';
 
+
+
 * {
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -21,7 +23,7 @@
 *, *::after, *::before {
   box-sizing: border-box;
 }
-*::selection { 
+*::selection {
 	background: var(--p-primary-color);
 	color: var(--p-fill-color);
 }
@@ -145,14 +147,14 @@ body {
         color: var(--t1-color-5);
     }
     i,p {
-        color: var(--t1-color-4-1); 
+        color: var(--t1-color-4-1);
     }
     i {
         font-family: 'Times New Roman', Times, serif;
     }
     p {
         font-size: 1rem;
-        line-height: 2; 
+        line-height: 2;
     }
     hr {
         margin: 75px 0;

@@ -4,7 +4,13 @@
     width: calc(100% - 256px);
     overflow-x: hidden;
     overflow-y: scroll;
-    
+
+    #saveNotification {
+        position: absolute;
+        top: calc(64px + 1rem);
+        right: 1rem;
+    }
+
     #page-size {
         position: absolute;
         right: 0;
@@ -21,7 +27,7 @@
         max-width: 1920px;
         height: 85%;
         min-height: 667px;
-        background-color: var(--p-extralight-body-color); 
+        background-color: var(--p-extralight-body-color);
         box-shadow: 0 0px 50px rgba(0,0,0,0.4);
         resize: vertical;
         overflow: hidden;
@@ -54,7 +60,7 @@
             border-radius: 5px 5px 0 0;
             padding: 10px 10px 0 10px;
             .p-menu {
-                width: 70px; 
+                width: 70px;
                 display: inline-block;
                 height: 25px;
                 @media (max-width: 750px) {
@@ -114,8 +120,6 @@
                 border: 0;
                 margin: 0 0 -4px 0;
             }
-        }   
+        }
     }
 }
-
-

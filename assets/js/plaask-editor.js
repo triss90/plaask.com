@@ -1,10 +1,10 @@
 // Manipulate the size of the page and save usersetting to localstorage
 function displayPageSize() {
-    // Set variables 
+    // Set variables
     var page = $('#p-page'),
     pageHeightElement = $('#page-height'),
     pageWidthElement = $('#page-width');
-    
+
     // Set page width and height from saved localstorage
     page.width(localStorage.getItem('pageWidth'));
     page.height(localStorage.getItem('pageHeight'));
@@ -37,7 +37,7 @@ function saveTextToLocalstorage() {
     // Get all editiple text input
     var pTextField = $('.contenteditable');
 
-    // Save text to localstorage when focus is removed 
+    // Save text to localstorage when focus is removed
     pTextField.on( "focusout", function() {
         var selectedTextFieldId = this.id,
             selectedTextFieldContent = $('#' + this.id).html();
@@ -49,9 +49,35 @@ function saveTextToLocalstorage() {
 // Insert data from localstorage to page
 function insertLocalstorage() {
     // Loop over each key and localstorage and map matching keys to content IDs
-    $.each(localStorage, function(key, value) {        
+    $.each(localStorage, function(key, value) {
         var pId = $('#' + key);
         pId.html(value);
+    });
+}
+
+
+// Save Website to local storage
+function saveWebsite() {
+
+    var editableElements = $('#theme1').contents().find('.contenteditable'),
+        editorContent = $('#editor-content'),
+        saveWebsiteButton = $('#saveWebsite');
+
+    saveWebsiteButton.on('click', function() {
+
+        editableElements.each(function() {
+            localStorage.setItem($(this).attr('id'), $(this).html());
+        });
+        saveWebsiteButton.html('<svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-loading"></use></svg>');
+
+        setTimeout(function () {
+            editorContent.append('<div id="saveNotification" class="notification info"><svg class="notification-icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-modal-success"></use></svg><div class="notification-content"><b class="notification-title">Saved!</b><p class="notification-message">Website succesfully saved to local storage</p></div></div>');
+            saveWebsiteButton.html('<svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-import"></use></svg>');
+            var saveNotification = $('#saveNotification');
+            setTimeout(function () {
+                saveNotification.remove();
+            }, 5000);
+        }, 1250);
     });
 }
 
@@ -61,6 +87,7 @@ $(document).ready(function() {
     displayPageSize();
     insertLocalstorage();
     saveTextToLocalstorage();
+    saveWebsite();
 });
 
 
@@ -130,6 +157,7 @@ function closePreviewWebsite() {
     var page = $('#p-page');
     page.removeClass('preview');
 }
+
 
 
 

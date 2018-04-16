@@ -35,10 +35,14 @@ include_once('../assets/colors.html');
                 </div>
             </span>
             <a href="#0" onclick="previewWebsite();" title="Preview website"><svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-view"></use></svg></a>
-            <a href="#0" title="Export website"><svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-jump"></use></svg></a>
         </div>
+        <div class="nav-items right">
+            <a href="#0" id="saveWebsite" title="Save website"><svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-import"></use></svg></a>
+            <!-- <a href="#0" title="Export website"><svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-jump"></use></svg></a> -->
+        </div>
+
     </nav>
-    
+
     <div id="page-size">
         <span id="page-width"></span>
         <span id="page-height"></span>
