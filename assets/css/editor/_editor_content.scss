@@ -32,6 +32,22 @@
         resize: vertical;
         overflow: hidden;
         border-radius: 10px;
+        #preview-close {
+            border: none;
+            background: var(--p-fill-color);
+            border-radius: 50%;
+            cursor: pointer;
+            padding: 10px;
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            z-index: 9999;
+            box-shadow: 0px 5px 20px rgba(0,0,0,0.4);
+            svg {
+                height: 2rem;
+                width: 2rem;
+            }
+        }
         &.preview {
             position: absolute;
             max-width: 100vw !important;

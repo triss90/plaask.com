@@ -151,11 +151,14 @@ function tabletPresetSize() {
 function previewWebsite() {
     var page = $('#p-page');
     page.addClass('preview');
+    page.append('<button type="button" onclick="closePreviewWebsite()" name="closePreview" id="preview-close"><svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-cross"></use></svg></button>');
 }
 // Close preview website
 function closePreviewWebsite() {
     var page = $('#p-page');
+    var previewCloseButton = $('#preview-close');
     page.removeClass('preview');
+    previewCloseButton.remove();
 }
 
 
