@@ -34,7 +34,7 @@ include_once('../assets/colors.html');
                     <a href="" class="dropdown-item">test</a>
                 </div>
             </span>
-            <a href="#0" title="Preview website"><svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-view"></use></svg></a>
+            <a href="#0" onclick="previewWebsite();" title="Preview website"><svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-view"></use></svg></a>
             <a href="#0" title="Export website"><svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-jump"></use></svg></a>
         </div>
     </nav>

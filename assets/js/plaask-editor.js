@@ -31,6 +31,41 @@ function displayPageSize() {
     });
 }
 
+
+// Save text to localstorage
+function saveTextToLocalstorage() {
+    // Get all editiple text input
+    var pTextField = $('.contenteditable');
+
+    // Save text to localstorage when focus is removed 
+    pTextField.on( "focusout", function() {
+        var selectedTextFieldId = this.id,
+            selectedTextFieldContent = $('#' + this.id).html();
+        localStorage.setItem(selectedTextFieldId, selectedTextFieldContent);
+    });
+}
+
+
+// Insert data from localstorage to page
+function insertLocalstorage() {
+    // Loop over each key and localstorage and map matching keys to content IDs
+    $.each(localStorage, function(key, value) {        
+        var pId = $('#' + key);
+        pId.html(value);
+    });
+}
+
+
+// Execute functions
+$(document).ready(function() {
+    displayPageSize();
+    insertLocalstorage();
+    saveTextToLocalstorage();
+});
+
+
+
+
 // Set the page width and height to preset computer size
 function computerPresetSize() {
     var page = $('#p-page'),
@@ -49,7 +84,6 @@ function computerPresetSize() {
         page.removeClass('transition');
     },250);
 }
-
 // Set the page width and height to preset phone size
 function phonePresetSize() {
     var page = $('#p-page'),
@@ -68,7 +102,6 @@ function phonePresetSize() {
         page.removeClass('transition');
     },250);
 }
-
 // Set the page width and height to preset tablet size
 function tabletPresetSize() {
     var page = $('#p-page'),
@@ -87,39 +120,26 @@ function tabletPresetSize() {
         page.removeClass('transition');
     },250);
 }
-
-
-
-// Save text to localstorage
-function saveTextToLocalstorage() {
-    // Get all editiple text input
-    var pTextField = $('.contenteditable');
-
-    // Save text to localstorage when focus is removed 
-    pTextField.on( "focusout", function() {
-        var selectedTextFieldId = this.id,
-            selectedTextFieldContent = $('#' + this.id).html();
-        localStorage.setItem(selectedTextFieldId, selectedTextFieldContent);
-    });
+// Maximize #p-page to preveiw website
+function previewWebsite() {
+    var page = $('#p-page');
+    page.addClass('preview');
+}
+// Close preview website
+function closePreviewWebsite() {
+    var page = $('#p-page');
+    page.removeClass('preview');
 }
 
 
 
-// Insert data from localstorage to page
-function insertLocalstorage() {
-    // Loop over each key and localstorage and map matching keys to content IDs
-    $.each(localStorage, function(key, value) {        
-        var pId = $('#' + key);
-        pId.html(value);
-    });
-}
-
-
-
-
-// Execute functions
-$(document).ready(function() {
-    displayPageSize();
-    insertLocalstorage();
-    saveTextToLocalstorage();
+// Keyboard commands
+$(document).keyup(function(e) {
+    // When Escape is clicked
+    if (e.keyCode === 27) {
+        // Close preview if it is open
+        if ($('#p-page').hasClass( "preview")) {
+            closePreviewWebsite();
+        }
+    }
 });

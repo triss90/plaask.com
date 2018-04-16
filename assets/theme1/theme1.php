@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="../css/beagle.css">
+    
     <link rel="stylesheet" href="theme1.css">
 </head>
 
@@ -137,7 +139,17 @@
             },
             toolbar: {
                 allowMultiParagraphSelection: true,
-                buttons: ['bold', 'italic', 'underline', 'h2', 'h3', 'image', 'anchor', 'quote', 'button'],
+                buttons: [
+                    'bold',
+                    'italic',
+                    'underline',
+                    'h2',
+                    'h3',
+                    'image', 
+                    'anchor',
+                    'quote',
+                    'button'
+                ],
                 diffLeft: 0,
                 diffTop: -10,
                 firstButtonClass: 'medium-editor-button-first',
@@ -152,14 +164,12 @@
                 autoLink: true
             },
             extensions: {
-
-                // expanded
                 'button': new MediumButton({
-                    label: 'BUTTON',
-                    start: '<button class="t1-button"',
+                    label: '<i class="fas fa-mouse-pointer"></i>',
+                    start: '<button class="t1-button">',
                     end:   '</button>'
                 }),
-
+                
             }
 
         });
