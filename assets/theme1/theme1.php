@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="../css/beagle.css">
@@ -106,11 +107,12 @@
     <script src="../js/medium-button.min.js"></script>
     <script src="../js/plaask-editor-min.js"></script>
 
-    <!-- https://yabwe.github.io/medium-editor/ -->
-    <!-- https://github.com/arcs-/medium-button -->
-    <!-- https://github.com/yabwe/medium-editor -->
     <!-- https://demo.getgrav.org/ceevee-skeleton/ -->
+
     <script>
+        // https://yabwe.github.io/medium-editor/
+        // https://github.com/arcs-/medium-button
+        // https://github.com/yabwe/medium-editor
         var editor = new MediumEditor('.contenteditable', {
             buttonLabels: false,
             keyboardCommands: {
@@ -176,9 +178,7 @@
                     }
                 }),
             }
-
         });
-
     </script>
 
 </body>

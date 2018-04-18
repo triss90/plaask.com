@@ -43,6 +43,18 @@
             left: 1rem;
             z-index: 9999;
             box-shadow: 0px 5px 20px rgba(0,0,0,0.4);
+            color: var(--p-darker-body-color);
+            transition: 150ms all ease-in-out;
+            span {
+                position: absolute;
+                display: block;
+                bottom: 5px;
+                left: 17px;
+            }
+            &:hover {
+                background: var(--p-primary-color);
+                color: var(--p-fill-color);
+            }
             svg {
                 height: 2rem;
                 width: 2rem;

@@ -43,24 +43,24 @@ body {
 .contenteditable {
     border: 2px dotted transparent;
     position: relative;
-    &:before {
-        content: "\00d7";
-        display: none;
-        padding: 10px;
-        position: absolute;
-        top: -2.1rem;
-        right: -1.8rem;
-        color: var(--p-primary-color);
-        font-size: 1.8rem;
-        margin: 0;
-        line-height: 1;
-        cursor: pointer;
-        transition: 200ms all ease-in-out;
-        font-weight: 400 !important;
-        &:hover {
-            font-size: 3rem !important;
-        }
-    }
+    // &:before {
+    //     content: "\00d7";
+    //     display: none;
+    //     padding: 10px;
+    //     position: absolute;
+    //     top: -2.1rem;
+    //     right: -1.8rem;
+    //     color: var(--p-primary-color);
+    //     font-size: 1.8rem;
+    //     margin: 0;
+    //     line-height: 1;
+    //     cursor: pointer;
+    //     transition: 200ms all ease-in-out;
+    //     font-weight: 400 !important;
+    //     &:hover {
+    //         font-size: 3rem !important;
+    //     }
+    // }
     &:hover {
         border: 2px dotted var(--p-primary-color)!important;
         &:before {

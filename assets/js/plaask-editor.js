@@ -30,8 +30,6 @@ function displayPageSize() {
         pageHeightElement.html(page.height() + 'px');
     });
 }
-
-
 // Save text to localstorage
 function saveTextToLocalstorage() {
     // Get all editiple text input
@@ -44,8 +42,6 @@ function saveTextToLocalstorage() {
         localStorage.setItem(selectedTextFieldId, selectedTextFieldContent);
     });
 }
-
-
 // Insert data from localstorage to page
 function insertLocalstorage() {
     // Loop over each key and localstorage and map matching keys to content IDs
@@ -54,11 +50,8 @@ function insertLocalstorage() {
         pId.html(value);
     });
 }
-
-
 // Save Website to local storage
 function saveWebsite() {
-
     var editableElements = $('#theme1').contents().find('.contenteditable'),
         editorContent = $('#editor-content'),
         saveWebsiteButton = $('#saveWebsite');
@@ -80,19 +73,6 @@ function saveWebsite() {
         }, 1250);
     });
 }
-
-
-// Execute functions
-$(document).ready(function() {
-    displayPageSize();
-    insertLocalstorage();
-    saveTextToLocalstorage();
-    saveWebsite();
-});
-
-
-
-
 // Set the page width and height to preset computer size
 function computerPresetSize() {
     var page = $('#p-page'),
@@ -151,7 +131,7 @@ function tabletPresetSize() {
 function previewWebsite() {
     var page = $('#p-page');
     page.addClass('preview');
-    page.append('<button type="button" onclick="closePreviewWebsite()" name="closePreview" id="preview-close"><svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-cross"></use></svg></button>');
+    page.append('<button type="button" onclick="closePreviewWebsite()" name="closePreview" id="preview-close"><svg class="icon" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-cross"></use></svg><span>esc</span></button>');
 }
 // Close preview website
 function closePreviewWebsite() {
@@ -162,11 +142,18 @@ function closePreviewWebsite() {
 }
 
 
+// Execute functions
+$(document).ready(function() {
+    displayPageSize();
+    insertLocalstorage();
+    saveTextToLocalstorage();
+    saveWebsite();
+});
 
 
 // Keyboard commands
 $(document).keyup(function(e) {
-    // When Escape is clicked
+    // Escape
     if (e.keyCode === 27) {
         // Close preview if it is open
         if ($('#p-page').hasClass( "preview")) {

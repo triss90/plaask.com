@@ -48,7 +48,6 @@ include_once('../assets/colors.html');
         <span id="page-height"></span>
     </div>
 
-
     <div id="p-page">
         <div class="p-header">
             <div class="p-menu">
